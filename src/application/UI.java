@@ -78,6 +78,8 @@ public class UI
 
     public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured)
     {
+        Scanner sc = new Scanner(System.in);
+
         printBoard(chessMatch.getPieces());
         System.out.println();
 
@@ -85,13 +87,21 @@ public class UI
         System.out.println();
 
         System.out.println("Turn : " + chessMatch.getTurn());
-        System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
 
-        if (chessMatch.getCheck())
+        if (!chessMatch.getCheckMate())
         {
-            System.out.println("CHECK!");
-        }
+            System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
 
+            if (chessMatch.getCheck()) {
+                System.out.println("CHECK!");
+            }
+        }
+        else
+        {
+            System.out.println("CHECKMATE!");
+            System.out.println("Winner: " + chessMatch.getCurrentPlayer());
+            sc.nextLine();
+        }
     }
 
     public static void printBoard (ChessPiece[][] pieces)
