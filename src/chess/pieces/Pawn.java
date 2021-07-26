@@ -7,12 +7,13 @@ import chess.Color;
 
 public class Pawn extends ChessPiece
 {
-
+    //Super Class constructor
     public Pawn(Board board, Color color)
     {
         super(board, color);
     }
 
+    //Methods
     @Override
     public boolean[][] possibleMoves()
     {
