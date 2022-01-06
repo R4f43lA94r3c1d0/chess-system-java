@@ -1,4 +1,4 @@
-# :chess_pawn: Chess System in Java :coffee:
+# :chess_pawn: Chess System in Java 
 
 ## Como jogar :video_game:
 
